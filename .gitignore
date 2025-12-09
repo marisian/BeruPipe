@@ -1,6 +1,11 @@
-.env
-.idea
+.env/
+env/
+.venv/
+venv/
+.idea/
+**/.DS_store
 temp/
 data/
 *.pyc
+__pycache__/
 *.xml
