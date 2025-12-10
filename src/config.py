@@ -28,8 +28,8 @@ class Config:
     params: Params
     
 def get_config(base_dir: Path = BASE_DIR) -> Config:
-    data_dir = base_dir / "Daten"
-    raw_data_dir = data_dir / "_BERUFENET/test"
+    data_dir = base_dir / "data"
+    raw_data_dir = data_dir / "_OCCDATA/test"
     intermediate_data_dir = data_dir / "intermediate"
     processed_data_dir = data_dir / "processed"
     
