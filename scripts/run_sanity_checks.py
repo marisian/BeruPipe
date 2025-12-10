@@ -1,5 +1,5 @@
 from src.config import get_config
-from tests.plausibility import (
+from temp.plausibility import (
     plausibility_transformed_occ_data
     )
 import pandas as pd
