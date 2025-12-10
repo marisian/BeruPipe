@@ -73,3 +73,29 @@ def mock_meta_xml_content():
         </beruf>
     </root>
     """
+
+# DataFrame dict fixture
+@pytest.fixture
+def sample_df_dict():
+    """Creates a dictionary with example dfs for transformation"""
+    # Example-df for b11-0 (Summary)
+    df_b11_0 = pd.DataFrame({
+        "b11-0_text": [
+            "This is a sentence with unwanted characters?!",
+            "A sentence with special chars & umlaute äöüß",
+            None,  # Will be removed by _dropna
+            " "  # Will be transformed by _clean_text to empty string
+        ],
+        "b11-0_revd": ["1.0", "1.0", "1.0", "1.0"]
+    })
+
+    # Example df for b11-2 (tasks)
+    df_b11_2 = pd.DataFrame({
+        "b11-2_text": ["First task", "Second task."],
+        "b11-2_revd": ["1.0", "1.0"]
+    })
+
+    return {
+        "b11-0": df_b11_0,
+        "b11-2": df_b11_2
+    }
