@@ -5,7 +5,7 @@ from dataclasses import dataclass
 
 # Base directory
 #BASE_DIR = Path(__file__).resolve().parent
-BASE_DIR = Path("N:/Ablagen/D01700-Projekte/5140-OccupationEmbeddings")
+BASE_DIR = Path("C:/Path/to/Project")
 
 @dataclass(frozen=True)
 class Paths:
