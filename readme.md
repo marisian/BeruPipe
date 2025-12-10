@@ -1,7 +1,8 @@
 # BeruPipe
-An upstream data parsing pipeline designed to remove XML structure and boilerplate from raw BERUFENET database extracts. 
+An upstream data parsing pipeline designed to remove XML structure and boilerplate from raw occupational database 
+extracts (Berufenet). 
 Creates a simple data model that links cleaned description texts of multiple occupational dimensions to occupational and 
-temporal metadata. Downstream, the data model can be used for text mining and feature extraction of BERUFENET data.
+temporal metadata. Downstream, the data model can be used for text mining and feature extraction of occupation text data.
 
 1. [About](#1-about)
 2. [Requirements](#2-requirements)
@@ -13,7 +14,7 @@ temporal metadata. Downstream, the data model can be used for text mining and fe
 8. [Contact Info](#8-contact)
 
 ## 1. About
-This project implements a two-step pipeline for transforming XML files from the BERUFENET-databases
+This project implements a two-step pipeline for transforming XML files from the occupational databases
 1. **XMLProcessor**: Finds raw XML files, parses content and creates a raw DataFrame with correct indexing
 2. **TextTransformer**: Cleans and normalizes and specifically transforms occupation descriptions from occupation DataFrames.
 
@@ -21,7 +22,7 @@ This project implements a two-step pipeline for transforming XML files from the 
 ## 2. Requirements
 * Python 3.10 or higher
 * Pip
-* Access to raw BERUFENET data
+* Access to raw occupation database data (Berufenet)
 
 ## 3. Installation
 
@@ -61,11 +62,11 @@ The main process is started by the script `main.py` (uses paths and parameters f
 ### Input data
 The modules of this program create cleaned and transformed data objects from raw input data. 
 The following input data is required for the scripts to run:
-* XML files extracted from the BERUFENET database (1 file = 1 occupation-year)
+* XML files with descriptive fields (b-fields) (1 file = 1 occupation-year)
 * An XML file with occupation meta-attributes (e.g. berufe.xml)
 
 ### Output data
-The main outputs of this program are data objects with transformed BERUFENET texts
+The main outputs of this program are data objects with transformed (cleaned, normalized) texts
 of config-specified information fields. Additionally, a metadata file with codes and other attributes at constant 
 occupation level is produced. The data can be linked across tables by the occupation ID ("dkz_id")
 
