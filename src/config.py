@@ -19,7 +19,8 @@ class Params:
     tag_map: dict[str, str]
     tags_to_extract: list[str]
     core_input_columns: dict[str, str]
-    transform_coalesce: bool
+    prefix_occdata: str
+    prefix_metadata: str
     
 @dataclass(frozen=True)
 class Config:
@@ -67,7 +68,8 @@ def get_config(base_dir: Path = BASE_DIR) -> Config:
             "text_short": "b11-0_text",
             "text_long": "b11-2_text"
             },
-        transform_coalesce = False
+        prefix_occdata = "beschreibung_beruf_",
+        prefix_metadata = "berufe"
         )
     
     return Config(paths=paths, params=params)
