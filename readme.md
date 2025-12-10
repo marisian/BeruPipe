@@ -27,8 +27,8 @@ This project implements a two-step pipeline for transforming XML files from the 
 
 1.  **Clone repository**
     ```bash
-    git clone [IHR_REPO_URL]
-    cd [PROJEKTNAME]
+    git clone https://github.com/marisian/BeruPipe
+    cd BeruPipe
     ```
 
 2.  **Create virtual environment and activate**
